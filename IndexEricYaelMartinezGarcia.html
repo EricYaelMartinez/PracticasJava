@@ -8,7 +8,39 @@
 
 </head>
 <body>
-    <h1>Primera Practica</h1>
+    <h1>Los botones Raiz 1 y Raiz 2 son para resolver ecuaciones con la FORMULA GENERAL.</h1>
+    <form id="Calculadora">
+        <label>Escribe una Variable a: </label>
+        <input type="number" name="" id="a" autofocus placeholder="Dale un valor para a">
+        <button onclick="limpiar();">Limpiar campos</button>
+
+        <br>
+        <br>
+        <label>Escribe una variable b: </label>
+        <input type="number" name="" id="b" placeholder="Da un valor para b">
+
+
+        <br>
+        <br>
+        <label>Escribe una variable c: </label>
+        <input type="number" name="" id="c" placeholder="Da un valor para c">
+
+        <br>
+        <br>
+        
+        <button type="button" onclick="Sumar();">SUMA</button>
+        <button type="button" onclick="Restar();">RESTA</button>
+        <button type="button" onclick="Multiplicar();">MULTIPLICACION</button>
+        <button type="button" onclick="Dividir();">DIVIDIR</button>
+        <button type="button" onclick="Raiz1();">RAIZ 1</button>
+        <button type="button" onclick="Raiz2();">RAIZ 2</button>
+         
+        <P>El resultado es: <span id="Resultado"></span></P>
+
+    </form>
+    
+    
+    
     <script>
         //ejercicio 1 Primera Practica
 let y = 10
@@ -29,6 +61,56 @@ console.log(typeof(x1)) // es de tipo numero
 //ejercicic 4 practica 1
 let h = new String("Hola Mundo");
 console.log(h)
+
+
+//PRACTICA NUMERO 2 EN JAVASCRIPT CALCULADORA
+    
+    function limpiar() {
+        document.getElementById('Calculadora').reset();
+    }
+
+    function Sumar(){
+        let a = parseFloat(document.getElementById('a').value);
+        let b = parseFloat(document.getElementById('b').value);
+        let c = parseFloat(document.getElementById('c').value);
+        document.getElementById('Resultado').innerHTML = a+b+c;
+    }   
+
+    function Restar(){
+        let a = parseFloat(document.getElementById('a').value);
+        let b = parseFloat(document.getElementById('b').value);
+        let c = parseFloat(document.getElementById('c').value);
+        document.getElementById('Resultado').innerHTML = a-b-c;
+    }
+
+    function Multiplicar(){
+        let a = parseFloat(document.getElementById('a').value);
+        let b = parseFloat(document.getElementById('b').value);
+        let c = parseFloat(document.getElementById('c').value);
+        document.getElementById('Resultado').innerHTML = a*b*c;
+    }  
+
+    function Dividir(){
+        let a = parseFloat(document.getElementById('a').value);
+        let b = parseFloat(document.getElementById('b').value);
+        let c = parseFloat(document.getElementById('c').value);
+        document.getElementById('Resultado').innerHTML = a/b/c;
+    }  
+
+    function Raiz1(){
+        let a = parseInt(document.getElementById('a').value);
+        let b = parseInt(document.getElementById('b').value);
+        let c = parseInt(document.getElementById('c').value);
+        document.getElementById('Resultado').innerHTML = ((-1*-b)-(Math.sqrt((Math.pow(b,2) - (4*a*c)))))/(2*a);
+    } 
+
+    function Raiz2(){
+        let a = parseFloat(document.getElementById('a').value);
+        let b = parseFloat(document.getElementById('b').value);
+        let c = parseFloat(document.getElementById('c').value);
+        document.getElementById('Resultado').innerHTML = ((-1*-b)+(Math.sqrt((Math.pow(b,2) - (4*a*c)))))/(2*a);
+    } 
+
     </script>
 </body>
 </html>
