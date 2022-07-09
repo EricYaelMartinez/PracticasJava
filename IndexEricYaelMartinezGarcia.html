@@ -16,8 +16,8 @@
 
         <br>
         <br>
-        <label>Escribe una variable b: </label>
-        <input type="number" name="" id="b" placeholder="Da un valor para b">
+        <label>Escr: </label>
+        <input type="text" name="" id="b" placeholder="Escribe un Operador">
 
 
         <br>
@@ -28,7 +28,7 @@
         <br>
         <br>
         
-        <button type="button" onclick="Sumar();">SUMA</button>
+        <button type="button" onclick="Operacion();">Realizar Operacion</button>
         <button type="button" onclick="Restar();">RESTA</button>
         <button type="button" onclick="Multiplicar();">MULTIPLICACION</button>
         <button type="button" onclick="Dividir();">DIVIDIR</button>
@@ -109,7 +109,8 @@ console.log(h)
         let b = parseFloat(document.getElementById('b').value);
         let c = parseFloat(document.getElementById('c').value);
         document.getElementById('Resultado').innerHTML = ((-1*-b)+(Math.sqrt((Math.pow(b,2) - (4*a*c)))))/(2*a);
-    } 
+    }
+
 
     </script>
 </body>
